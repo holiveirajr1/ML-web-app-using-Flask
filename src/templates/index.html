@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Attack Predictor</title>
+</head>
+<body>
+    <h2>Enter Patient Data</h2>
+
+    <form method="POST" action="/">
+        Age: <input type="number" step="any" name="age" required><br><br>
+        Gender (0=Female, 1=Male): <input type="number" name="gender" required><br><br>
+        Impluse: <input type="number" step="any" name="impluse" required><br><br>
+        Pressure High: <input type="number" step="any" name="pressurehight" required><br><br>
+        Pressure Low: <input type="number" step="any" name="pressurelow" required><br><br>
+        Glucose: <input type="number" step="any" name="glucose" required><br><br>
+        KCM: <input type="number" step="any" name="kcm" required><br><br>
+        Troponin: <input type="number" step="any" name="troponin" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction is not none %}
+        <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
+
