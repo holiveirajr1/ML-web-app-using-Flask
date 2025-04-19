@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 import numpy as np
 import joblib
 
-model = joblib.load("../workspaces/ML-web-app-using-Flask/decision_tree_model.pkl")
+model = joblib.load("models/decision_tree_model.pkl")
 
 
 app = Flask(__name__)
